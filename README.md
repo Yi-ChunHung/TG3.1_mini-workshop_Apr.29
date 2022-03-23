@@ -6,7 +6,7 @@ Codes that would be shown to students who attend the second part of the mini-wor
 
 ## ❓ [What do we need for a tight-binding Hamiltonian ?](./Tight-Binding-Model.pdf)
 
-## ❓ [What else do we need to describe a material ?](./info-for-material.pdf)
+## ❓ [What else do we need to describe a material ?](./Info-for-material.pdf)
 
 # 📂 [BandPlot](./BandPlot)
 
