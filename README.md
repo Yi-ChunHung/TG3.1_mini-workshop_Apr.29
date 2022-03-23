@@ -2,8 +2,6 @@
 
 Codes that would be shown to students who attend the second part of the mini-workshop in TG3.1 of NCTS physics at National Taiwan University on Apr. 29, 2022.
 
-## ⚖️ [LISCENSE](./LICENSE)
-
 ## ❓ [What do we need for a tight-binding Hamiltonian ?](./Tight-Binding-Model.pdf)
 
 ## ❓ [What else do we need to describe a material ?](./Info-for-material.pdf)
