@@ -32,27 +32,11 @@ load Ekplot.mat
 >> PlotDispersion(Ef,Name)
 ```
 
-## 🚩 [band spintexture](./band%20spintexture)
-
-The bandplot_concise_ftn58sparse_sp.m calculate the spintexture of a given component of spin on the band. Use 'PlotDispersionSP.m' to plot the results.
-
-> - [ ] examples
-> - [x] passed debug
-> - [ ] exist future works 
-
-## 🚩 [bulk projection](./bulk%20projection)
+## 🚩 [bulk_projection](./bulk_projection)
 
 The bandplot_concise_ftn58sparse_ex_bp.m project the bulk band structure onto lower dimensional BZ. The code assume the lower dimensional BZ is to describe the **broken periodicities along reciprocal lattice vectors**.
 
 > - [x] examples
-> - [x] passed debug
-> - [ ] exist future works
-
-## 🚩 [interface band](./interface%20band)
-
-The bandplot_concise_ftn58sparse_interface.m provide a module for constructing a special kind of interface and plotting its band structure.
-
-> - [ ] examples
 > - [x] passed debug
 > - [ ] exist future works
 
