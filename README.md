@@ -16,7 +16,7 @@ The folder contains codes that calculate and plot the band structure and partial
 
 The folder contains codes that improve quality-of-life while dealing with tight-binding models.
 
-# 📁 [STBHmftn (large sys. ver.)](./STBHmftn%20(large%20sys.%20ver.))
+# 📁 [STBHmftn](./STBHmftn)
 
 The program generates a slab with given surface normal through bulk tight-binding models.
 
