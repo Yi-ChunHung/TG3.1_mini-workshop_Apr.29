@@ -2,6 +2,10 @@
 
 This program can calculate the surface states on a semi-inifite thin film by using the Green's function method.
 
+## 📓 [Principle_1](./M_P_Lopez_Sancho_1985_J._Phys._F__Met._Phys._15_851.pdf)
+
+## 📓 [Principle_2](./PhysRevB.31.5166.pdf)
+
 ## 🔰 Getting Started
 
 From the step in "STBHmftn", you will know that the maximum hopping distace for the (001) surface is 7. Thus you should consturct the finite slab model with 7x2 = 14 layers. (for the reason please referring to the method paper)
