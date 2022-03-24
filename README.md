@@ -6,13 +6,9 @@ Codes that would be shown to students who attend the second part of the mini-wor
 
 ## ❓ [What else do we need to describe a material ?](./Info-for-material.pdf)
 
-# 📂 [BandPlot](./BandPlot)
+# 📁 [TBHmftn](./TBHmftn)
 
-The folder contains codes that calculate and plot the band structure and partial charge distribution along a given k-path.
-
-# 🧰 [ftn58ToolBox](./ftn58ToolBox)
-
-The folder contains codes that improve quality-of-life while dealing with tight-binding models.
+The program generates tight-binding model through a given tight-binding Hamiltonian or a _hr.dat file.
 
 # 📁 [STBHmftn](./STBHmftn)
 
@@ -22,6 +18,12 @@ The program generates a slab with given surface normal through bulk tight-bindin
 
 The folder contains programs that calculate and plot the surface spectral weight of a tight-binding model by using real-space renormalization group through Green's function.
 
-# 📁 [TBHmftn](./TBHmftn)
+## :two: Plan-B codes
 
-The program generates tight-binding model through a given tight-binding Hamiltonian or a _hr.dat file.
+# 📂 [BandPlot](./BandPlot)
+
+The folder contains codes that calculate and plot the band structure and partial charge distribution along a given k-path.
+
+# 🧰 [ftn58ToolBox](./ftn58ToolBox)
+
+The folder contains codes that improve quality-of-life while dealing with tight-binding models.

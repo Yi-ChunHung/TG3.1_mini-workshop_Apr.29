@@ -19,7 +19,7 @@ function SlabCell()
 
 %% Check that [h k l] is in CARTESIAN representation (1) or in TRANSLATION representation (0)
 %% (Added by YiChun 03/18/21)
-isCAR = 0;
+isCAR = 1;
 
 %% --- Input Arguments --- %%
 wcal = ReadInput('input.txt');

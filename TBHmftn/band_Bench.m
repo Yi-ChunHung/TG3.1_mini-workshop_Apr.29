@@ -5,10 +5,10 @@ clear all
 
 E_range = [-3 3];
 Ef      = 4.3391;
-load SnTesoc.mat
+load SnTesoc.mat     % DFT reference
+load ftn58sparse_soc
 
 %% Initial info. %%
-load ftn58sparse
 norb = ftn58sparse.norb;
 ii   = ftn58sparse.ij(:,1);
 jj   = ftn58sparse.ij(:,2);

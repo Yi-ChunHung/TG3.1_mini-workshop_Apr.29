@@ -4,6 +4,14 @@ This program can create a finite slab tight-binding model with the (hkl) surface
 
 ## 🔰 Getting Started
 
+0️⃣ If you want to describe the plane through (intercept on Cartesian axis/normal of the plane in the basis of translation vectors), tunr (on/off) the 'isCar' option in 'SlabCell.m':
+
+```Matlab
+%% Check that [h k l] is in CARTESIAN representation (1) or in TRANSLATION representation (0)
+%% (Added by YiChun 03/18/21)
+isCAR = 1;
+```
+
 0️⃣ Check the order of the atoms ('superatomps') is sorted in the desired way through the lines at the bottom of 'SlabCell'. If there is no special needs for order of the atoms, comment these lines.
 
 ```Matlab
