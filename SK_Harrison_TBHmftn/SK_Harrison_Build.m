@@ -67,19 +67,19 @@ onsite(17:19) = [3.43;3.43;2.70741];
 onsite(20:22) = [3.43;3.43;2.70741];                
 
 %% --- Adjusted distance dependent TB parameters (Harrison) --- %%
-%powd_1 = 4.4;       % order of atoms' distance for s,p & d
-%powd_2 = 4.4;       % order of atoms' distance for d & d
-%ro_1 = 1;           % order of rd(orb1) , s,p & d
-%ro_2 = 1;           % order of rd(orb2) , s,p & d
-%ro_3 = 1;           % order of rd(orb1) , d & d
-%ro_4 = 1;           % order of rd(orb2) , d & d
+powd_1 = 4.4;       % order of atoms' distance for s,p & d
+powd_2 = 4.4;       % order of atoms' distance for d & d
+ro_1 = 1;           % order of rd(orb1) , s,p & d
+ro_2 = 1;           % order of rd(orb2) , s,p & d
+ro_3 = 1;           % order of rd(orb1) , d & d
+ro_4 = 1;           % order of rd(orb2) , d & d
 
-%rd = ones([1 norb]);
-%rd([1 6]) = 1.0;
-%rd([2:3 7:8]) = 1.0;
-%rd([4:5 9:10]) = 1.0;
-%rd([11:12 14:15 17:18 20:21]) = 1.0;
-%rd([13 16 19 22]) = 1.0;
+rd = ones([1 22]);
+rd([1 6]) = 1.0;
+rd([2:3 7:8]) = 1.0;
+rd([4:5 9:10]) = 1.0;
+rd([11:12 14:15 17:18 20:21]) = 1.0;
+rd([13 16 19 22]) = 1.0;
 %%% ---------------------------------------- %%%
 %%% ---------------------------------------- %%%
 
@@ -201,7 +201,7 @@ for iorb1=1:norb
             TBK2 = TB2KKR(iorb2,3);
             
             t = slaterkoster(vec2(1,ii)/r2(ii),vec2(2,ii)/r2(ii),vec2(3,ii)/r2(ii),TBK1,TBK2);                                                                         
-            %t = harrison(TBK1,TBK2,t,r2(ii),powd_1,powd_2,rd(iorb1),rd(iorb2),ro_1,ro_2,ro_3,ro_4);
+            t = harrison(TBK1,TBK2,t,r2(ii),powd_1,powd_2,rd(iorb1),rd(iorb2),ro_1,ro_2,ro_3,ro_4);
             
             if abs(t) <= Ecut
                 %ftn58temp = [ftn58temp;[iorb1 iorb2 t lat_unit(:,ii)']];

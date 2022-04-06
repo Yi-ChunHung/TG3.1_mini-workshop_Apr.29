@@ -23,23 +23,26 @@ function HAR = harrison(orb1,orb2,t_sk,dij,por1,por2,rd1,rd2,ro1,ro2,ro3,ro4)
 
 hbarm = 2*13.6058;      % --- binding energy of hydrogen
 
-if (0<orb1) && (orb1<5)
-    if (0<orb2) && (orb2<5)
-        HAR  = t_sk*hbarm/dij^2;                                            % sp,sp interaction , formula(1)
-    end
-	if (4<orb2) && (orb2<10)
-        hm   = hbarm*(rd1^ro1)*(rd2^ro2);
-        HAR  = t_sk*hm/dij^por1;                                            % sp,d interaction , formula(18)
-    end
-end
-
-if (4<orb1) && (orb1<10) 
-	if (0<orb2) && (orb2<5)
-        hm   = hbarm*(rd1^ro1)*(rd2^ro2);
-        HAR  = t_sk*hm/dij^por1;                                            % sp,d interaction , formula(18)
-    end
-	if (4<orb2) && (orb2<10)
-        hm   = hbarm*(rd1^ro3)*(rd2^ro4);
-        HAR  = t_sk*hm/dij^por2;                                            % d,d interaction , formula(2)
-	end
-end
+hm   = hbarm;
+HAR  = t_sk*hm/dij^por1; 
+%
+%if (0<orb1) && (orb1<5)
+%    if (0<orb2) && (orb2<5)
+%        HAR  = t_sk*hbarm/dij^2;                                            % sp,sp interaction , formula(1)
+%    end
+%	if (4<orb2) && (orb2<10)
+%        hm   = hbarm*(rd1^ro1)*(rd2^ro2);
+%        HAR  = t_sk*hm/dij^por1;                                            % sp,d interaction , formula(18)
+%    end
+%end
+%
+%if (4<orb1) && (orb1<10) 
+%	if (0<orb2) && (orb2<5)
+%        hm   = hbarm*(rd1^ro1)*(rd2^ro2);
+%        HAR  = t_sk*hm/dij^por1;                                            % sp,d interaction , formula(18)
+%    end
+%	if (4<orb2) && (orb2<10)
+%        hm   = hbarm*(rd1^ro3)*(rd2^ro4);
+%        HAR  = t_sk*hm/dij^por2;                                            % d,d interaction , formula(2)
+%	end
+%end

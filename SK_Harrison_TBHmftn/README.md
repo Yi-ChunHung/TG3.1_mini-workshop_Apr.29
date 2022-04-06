@@ -92,7 +92,7 @@ ddd = -2.29;
 %%% ---------- %%%  
 ```
 
-3️⃣ Prepare the SOC parameters in 'SK_Harrison_Build.m'.
+3️⃣ Prepare the SOC parameters in 'SK_Harrison_Build.m'. The format is the same as the one for 'SOftn58.m'.
 
 ```Matlab
 %% --- SOC parameters --- %%%
