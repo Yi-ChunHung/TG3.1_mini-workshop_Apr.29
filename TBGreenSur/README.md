@@ -1,6 +1,6 @@
 # 🧭 GreenSur
 
-This program can calculate the surface states on a semi-inifite thin film by using the Green's function method.
+This program can calculate the surface states on a semi-inifite thin film by using the Green's function method with slab information.
 
 ## 📓 [Principle_1](./M_P_Lopez_Sancho_1985_J._Phys._F__Met._Phys._15_851.pdf)
 
@@ -48,3 +48,7 @@ endGreenSur
 ```Matlab
 >> PlotEk.m
 ```
+
+## 🚩 [BulkRSRG](./BulkRSRG)
+
+This subdirectory contains codes doing exactly the same thing but with bulk information.

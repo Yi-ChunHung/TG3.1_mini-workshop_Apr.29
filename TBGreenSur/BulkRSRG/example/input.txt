@@ -1,0 +1,17 @@
+GreenSur
+
+wcal.Ni      = 20                    
+wcal.ef      = 0
+wcal.Emu     = [-0.5 0.5]
+wcal.Ne      = 400
+wcal.np      = 6
+wcal.nn      = 0.00006                  
+wcal.kc      = 800
+wcal.kp1     = [0.0  0.0]
+wcal.kp2     = [0.5  0.0]
+wcal.kp3     = [1.0  0.0]
+wcal.surface = 2
+wcal.hop_d   = 1
+wcal.file    = ftn59_zigzag_zigzag_1.mat
+
+endGreenSur

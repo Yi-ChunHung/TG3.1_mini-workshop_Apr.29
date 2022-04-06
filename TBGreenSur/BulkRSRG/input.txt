@@ -1,0 +1,17 @@
+GreenSur
+
+wcal.Ni      = 20                    
+wcal.ef      = 0
+wcal.Emu     = [-1,1]
+wcal.Ne      = 200
+wcal.np      = 6
+wcal.nn      = 0.0001                  
+wcal.kc      = 600
+wcal.kp1     = [0.0  0.0]
+wcal.kp2     = [0.5  0.0]
+wcal.kp3     = [0.0  0.0]
+wcal.surface = 1
+wcal.hop_d   = 1
+wcal.file    = ftn58sparse_vr0_g0.mat
+
+endGreenSur
