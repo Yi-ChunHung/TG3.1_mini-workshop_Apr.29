@@ -1,0 +1,12 @@
+WilsonLoop
+
+wcal.nVB    = 7
+wcal.ib1    = 40
+wcal.ib2    = 40
+wcal.ib3    = 1
+wcal.mode   = 1
+wcal.ref    = ftn58sparse.mat
+wcal.ncpu   = 6
+
+endWilsonLoop
+

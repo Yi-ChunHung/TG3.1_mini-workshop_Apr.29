@@ -18,11 +18,23 @@ The program generates tight-binding model through a given tight-binding Hamilton
 
 The program generates a slab with given surface normal through bulk tight-binding models.
 
+# 📁 [SuperCell](./SuperCell/)
+
+The program generates a cell with given Bravais vectors through bulk tight-binding models.
+
+# 📁 [NRTBHmftn](./NRTBHmftn/)
+
+The program generates a nano-ribbon through cutting a super cell.
+
 # 📂 [TBGreenSur](./TBGreenSur)
 
 The folder contains programs that calculate and plot the surface spectral weight of a tight-binding model by using real-space renormalization group through Green's function.
 
-## :two: Plan-B codes
+# 📂 [BerryWilson](./BerryWilson/)
+
+The program calculate the Wilson loop of a given tight-binding model.
+
+## :two: Basic codes
 
 # 📂 [BandPlot](./BandPlot)
 

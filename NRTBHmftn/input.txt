@@ -1,0 +1,11 @@
+SuperCell
+
+wcal.vec1   = [2 0 0]
+wcal.vec2   = [0 2 0]
+wcal.vec3   = [0 0 1]
+wcal.file   = Hai_Xiao_TBHmftn.mat
+
+wcal.ribdir = 3
+
+endSuperCell
+
