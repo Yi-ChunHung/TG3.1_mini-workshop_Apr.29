@@ -94,3 +94,32 @@ endTBHmftn
 ```Matlab
 >> band_ftn.m
 ```
+
+## :bookmark: Format of ftn58
+
+| Column 1 | Column 2 | Column 3 | Column 4 | Column 5 | Column 6 | Column 7 |
+| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| norb     | nbound   |
+| order    | ii       | jj       | tt       | dd(1)    | dd(2)    | dd(3)    |
+| ...      | ...      | ...      | ...      | ...      | ...      | ...      |
+
+,where
+
+> norb   : number of spin-orbitals
+
+> nbound : sum of the number of non-zero upper-triangular matrix elements in each translation
+
+> order  = [1:nbound]
+
+and
+
+> ii     : rows where non-zero upper-triangular matrix elements locate
+
+> jj     : columns where non-zero upper-triangular matrix elements locate
+
+> tt     : the non-zero upper-triangular matrix elements
+
+> dd     : relative translation (d_jj - d_ii) _in the basis of reciprocal lattice vectors_
+
+Note that the Hamiltonian should be in the basis of spin (tensor product) orbitals.
+
