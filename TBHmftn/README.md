@@ -2,9 +2,37 @@
 
 This script will convert the case_hr.dat generated from the wannier90 or a ftn58 to a packed file named ftn58sparse.mat.
 
+## :bookmark: Format of ftn58 (i.e. the TB-model)
+
+| Column 1 | Column 2 | Column 3 | Column 4 | Column 5 | Column 6 | Column 7 |
+| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| norb     | nbound   |
+| order    | ii       | jj       | tt       | dd(1)    | dd(2)    | dd(3)    |
+| ...      | ...      | ...      | ...      | ...      | ...      | ...      |
+
+,where
+
+> norb   : number of spin-orbitals
+
+> nbound : sum of the number of non-zero upper-triangular matrix elements in each translation
+
+> order  = [1:nbound]
+
+and
+
+> ii     : rows of non-zero upper-triangular matrix elements
+
+> jj     : columns of non-zero upper-triangular matrix elements
+
+> tt     : the non-zero upper-triangular matrix elements
+
+> dd     : relative translation (d_jj - d_ii) _in the basis of reciprocal lattice vectors_
+
+Note that the Hamiltonian should be in the basis of spin (tensor product) orbitals.
+
 ## 🔰 Getting Strated
 
-0️⃣ Choose the source for ftn58sparse.mat in TBHmftn.m
+0️⃣ Choose the source for ftn58sparse.mat in "TBHmftn.m"
 
 ```Matlab
 %% --- Choose your ftn58 resource --- %%
@@ -16,7 +44,7 @@ else
 end
 ```
 
-1️⃣ Prepare the structure input file (st_input.txt) for your Wannier tight-binding model. The information should follow the data in .win file. An example for SnTe is given below:
+1️⃣ Prepare the structure input file ("st_input.txt") for your Wannier tight-binding model. The information should follow the data in .win file. An example for SnTe is given below:
 
 ```txt
 SnTe_bulk                          % Name for the model
@@ -32,7 +60,7 @@ Te 2 3 4                           % (2nd type) the order should be the same as 
 -0.50000   0.50000   0.50000    3  % the order should be the same as part between "begin atoms_cart" and "end atoms_cart" in .win file.
 ```
 
-,in which the orbit index should follow the table in TBHmftn.m:
+,in which the orbit index should follow the table in "TBHmftn.m":
 
 ```Matlab
 %%% ---------------------------------------------------------------------- %%%
@@ -64,7 +92,7 @@ id2txt = {'s' 'px' 'py' 'pz' 'dz' 'dxz' 'dyz' 'dxy' 'dx2y2' ...
           'fz3' 'fxz2' 'fyz2' 'fz(x2-y2)' 'fxyz' 'fx(x2-3y2)' 'fy(3x2-y2)'};
 ```
 
-2️⃣ Prepare the input (input.txt) file for the program "TBHmftn".
+2️⃣ Prepare the input ("input.txt") file for the program "TBHmftn".
 
 ``` txt
 TBHmftn                         
@@ -94,32 +122,3 @@ endTBHmftn
 ```Matlab
 >> band_ftn.m
 ```
-
-## :bookmark: Format of ftn58
-
-| Column 1 | Column 2 | Column 3 | Column 4 | Column 5 | Column 6 | Column 7 |
-| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| norb     | nbound   |
-| order    | ii       | jj       | tt       | dd(1)    | dd(2)    | dd(3)    |
-| ...      | ...      | ...      | ...      | ...      | ...      | ...      |
-
-,where
-
-> norb   : number of spin-orbitals
-
-> nbound : sum of the number of non-zero upper-triangular matrix elements in each translation
-
-> order  = [1:nbound]
-
-and
-
-> ii     : rows where non-zero upper-triangular matrix elements locate
-
-> jj     : columns where non-zero upper-triangular matrix elements locate
-
-> tt     : the non-zero upper-triangular matrix elements
-
-> dd     : relative translation (d_jj - d_ii) _in the basis of reciprocal lattice vectors_
-
-Note that the Hamiltonian should be in the basis of spin (tensor product) orbitals.
-

@@ -38,7 +38,7 @@ The program calculate the Wilson loop of a given tight-binding model.
 
 # 📂 [BandPlot](./BandPlot)
 
-The folder contains codes that calculate and plot the band structure and partial charge distribution along a given k-path.
+The folder contains codes that calculate and plot the band structure and partial charge distributions along a given k-path.
 
 # 🧰 [ftn58ToolBox](./ftn58ToolBox)
 

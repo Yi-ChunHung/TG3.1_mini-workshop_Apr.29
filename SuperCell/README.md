@@ -33,7 +33,7 @@ NR_22_id     = find(tru_atomps(:,f1)>=(nv(f1)/2) & tru_atomps(:,f2)>=(nv(f2)/2) 
 atomps       = [atomps(NR_11_id,:);atomps(NR_12_id,:);atomps(NR_21_id,:);atomps(NR_22_id,:)];
 ```
 
-0️⃣ Check the order of the orbitals ('orbitps') is sorted in the desired way throught the lines at the middle of the 'Supercell.m'. If there is nor special needs for order of the atoms, comment these lines.
+0️⃣ Check the order of the orbitals ('orbitps') is sorted in the desired way throught the lines at the middle of the 'Supercell.m'. If there is no special needs for order of the atoms, comment these lines.
 
 ```Matlab
 %%% ==================================================== %%%

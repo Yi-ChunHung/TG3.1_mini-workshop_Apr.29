@@ -1,6 +1,6 @@
 # 🧭 GreenSur_bulkRSRG
 
-This program can calculate the surface states on a semi-inifite thin film by using the Green's function method with bulk information.
+This program can calculate the surface states on a semi-inifite thin film by using the Green's function method with bulk TB-model.
 
 ## 🔰 Getting Started
 

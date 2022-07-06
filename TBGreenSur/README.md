@@ -51,4 +51,4 @@ endGreenSur
 
 ## 🚩 [BulkRSRG](./BulkRSRG)
 
-This subdirectory contains codes doing exactly the same thing but with bulk information.
+This subdirectory contains codes doing exactly the same thing but with bulk TB model.

@@ -16,7 +16,6 @@ function BerryWilson
     np   = wcal.ncpu;
     mode = wcal.mode;
     
-    
     if mode ~= 0 && mode ~= 1
         fprintf('Z2: mode=0 ; Chern: mode=1 \n')
         error('There is only two modes !!! \n')
@@ -96,11 +95,9 @@ function BerryWilson
                     EV_pre_VB = EV_VB;
                 end
             end
-            eigval_D = eig(F);                           % PRB84,075119 eq. 11: eigenvalue of D
-            theta_Dm(:,ii2,ii3) = sort(angle(eigval_D)); % PRB84,075119 eq. 12      
-            fff(ii2,ii3) = angle(f);                     % Lecture notes on topological insulators, Ming-Che Chang
-                                                         % (A32) \integral_{M}(tr(F)) ==> \integral_{l}(tr(A)) 
-                                                         % ==> winding number of tr(A) ==> definition of Chern class
+            eigval_D = eig(F);                               % PRB84,075119 eq. 11: eigenvalue of D
+            theta_Dm(:,ii2,ii3) = sort(angle(eigval_D));     % PRB84,075119 eq. 12      
+            fff(ii2,ii3) = angle(f);                                                                  
         end
     end
     toc

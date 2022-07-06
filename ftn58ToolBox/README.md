@@ -4,7 +4,7 @@ The tool box contains codes that improve quality of life while dealing with ftn5
 
 ## 🚩 [RSPCD](./RSPCD)
 
-The code plots the Real-Space Partial Charge Distribution resolve to atoms.
+The code plots the distribution of a wave function resolving to atoms.
 
 ## 🚩 [RS_Hamiltonian](./RS_Hamiltonian.m)
 
