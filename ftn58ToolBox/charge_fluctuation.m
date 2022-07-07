@@ -2,7 +2,7 @@ clear all
 
 %%% --- inputs --- %%%
 load Narrow_Ribbon_ftn58sparse.mat
-filling    = 2;
+filling    = 2;       % number of filled bands on each site
 nocc       = 3200;
 kvec       = 0; % at kvec
 minbondlen = 2.6;     % only bonds with bond length > minbondlen would be plot

@@ -14,7 +14,7 @@ The code tidies up the matrix elements of ftn58sparse for each translation.
 
 The code tranforms a Sftn58sparse into a ftn58.
 
-## 🚩 [charge_fluctuation](./check_onsite.m)
+## 🚩 [charge_fluctuation](./charge_fluctuation.m)
 
 The code calculate the charge fluctuation respect to vacuum as a function of position.
 
