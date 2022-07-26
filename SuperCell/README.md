@@ -2,6 +2,8 @@
 
 The program can generate an arbitrary supercell from a TB model with new unit vectors constructed from the linear combination of the original unit vecotrs.
 
+## :notebook: [Principle](./Principle%20of%20supercell.pdf)
+
 ## ❗ Warning
 
 The format of Orbitps will greatly affect the validity of this program. Please pay attention on it for the ftn58sparse that may not comes from the standard process.

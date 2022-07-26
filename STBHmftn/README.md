@@ -2,6 +2,8 @@
 
 This program can create a finite slab tight-binding model with the (hkl) surface from the bulk tight-binding model.
 
+## :notebook: [Principle](./Principle%20of%20supercell.pdf)
+
 ## ❗ Warning
 
 The format of Orbitps may greatly affect the validity of this program. Please pay attention on it for the ftn58sparse that may not comes from the standard process.
