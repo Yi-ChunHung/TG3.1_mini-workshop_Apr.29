@@ -53,31 +53,7 @@ for layer=1:amount_of_layer
 	elseif BPdirection == 1
 		kpt_temp  = [(layer-1)*(1/(amount_of_layer+1))*ones(nks,1), kpt(:,1), kpt(:,2)];
 	end
-	kpoints   = 2*pi*kpt_temp;
-	PCD_exp_1 = zeros(norb,norb);
-	PCD_exp_2 = zeros(nks,norb);
-	PCD_exp_3 = zeros(nks,norb);
-	PCD_exp_4 = zeros(nks,norb);
-	% ----------------------------------------------------------- %
-	% --- Expectation Value for the partial charge distribution - % 
-	% --- Using block diagonalized Identity matrix -------------- %
-	% ----------------------------------------------------------- %
-	if length(PCD_orb_1) ~= 0
-		v              = ones(length(PCD_orb_1),1);
-		PCD_exp_1      = full(sparse(PCD_orb_1,PCD_orb_1,v,norb,norb)); 
-	end
-	if length(PCD_orb_2) ~= 0
-		v              = ones(length(PCD_orb_2),1);
-		PCD_exp_2      = full(sparse(PCD_orb_2,PCD_orb_2,v,norb,norb)); 
-	end
-	if length(PCD_orb_3) ~= 0
-		v              = ones(length(PCD_orb_3),1);
-		PCD_exp_3      = full(sparse(PCD_orb_3,PCD_orb_3,v,norb,norb));
-	end
-	if length(PCD_orb_4) ~= 0
-		v              = ones(length(PCD_orb_4),1);
-		PCD_exp_4      = full(sparse(PCD_orb_4,PCD_orb_4,v,norb,norb));
-	end           
+	kpoints   = 2*pi*kpt_temp;           
 	% ----------------------------------------------------------- %
 	% ---------------------- Calculation ------------------------ % 
 	% ----------------------------------------------------------- %
@@ -98,19 +74,19 @@ for layer=1:amount_of_layer
 	    Ek(ik,:,layer)  = diag(Etemp);
 		% Calculate the partial charge distributions
 	    if length(PCD_orb_1) ~= 0
-			PCD_1(ik,:,layer) = diag(vec' * PCD_exp_1 * vec);
-	    end 
-	    if length(PCD_orb_2) ~= 0
-			PCD_2(ik,:,layer) = diag(vec' * PCD_exp_2 * vec);
-	    end
-	    if length(PCD_orb_3) ~= 0
-			PCD_3(ik,:,layer) = diag(vec' * PCD_exp_3 * vec);
-	    end
-	    if length(PCD_orb_4) ~= 0
-			PCD_4(ik,:,layer) = diag(vec' * PCD_exp_4 * vec);
-	    end
+			PCD_1(ik,:,layer) = vecnorm(vec(PCD_orb_1,:)).^2;
+		end 
+		if length(PCD_orb_2) ~= 0
+			PCD_2(ik,:,layer) = vecnorm(vec(PCD_orb_2,:)).^2;
+		end
+		if length(PCD_orb_3) ~= 0
+			PCD_3(ik,:,layer) = vecnorm(vec(PCD_orb_3,:)).^2;
+		end
+		if length(PCD_orb_4) ~= 0
+			PCD_4(ik,:,layer) = vecnorm(vec(PCD_orb_4,:)).^2;
+		end
 	end
-	Ek = Ek;
+	% Ek = Ek;
 	%toc
 end
 

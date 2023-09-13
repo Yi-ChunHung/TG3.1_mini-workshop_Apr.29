@@ -78,34 +78,9 @@ nks       = size(kpt,1);
 kpoints   = 2*pi*kpt;
 Ek        = zeros(nks,norb);
 PCD_1 	  = zeros(nks,norb);
-PCD_exp_1 = zeros(norb,norb);
 PCD_2     = zeros(nks,norb);
-PCD_exp_2 = zeros(nks,norb);
 PCD_3     = zeros(nks,norb);
-PCD_exp_3 = zeros(nks,norb);
 PCD_4     = zeros(nks,norb);
-PCD_exp_4 = zeros(nks,norb);
-
-% ----------------------------------------------------------- %
-% --- Expectation Value for the partial charge distribution - % 
-% --- Using block diagonalized Identity matrix -------------- %
-% ----------------------------------------------------------- %
-if length(PCD_orb_1) ~= 0
-	v              = ones(length(PCD_orb_1),1);
-	PCD_exp_1      = full(sparse(PCD_orb_1,PCD_orb_1,v,norb,norb)); 
-end
-if length(PCD_orb_2) ~= 0
-	v              = ones(length(PCD_orb_2),1);
-	PCD_exp_2      = full(sparse(PCD_orb_2,PCD_orb_2,v,norb,norb)); 
-end
-if length(PCD_orb_3) ~= 0
-    v              = ones(length(PCD_orb_3),1);
-    PCD_exp_3      = full(sparse(PCD_orb_3,PCD_orb_3,v,norb,norb));
-end
-if length(PCD_orb_4) ~= 0
-    v              = ones(length(PCD_orb_4),1);
-    PCD_exp_4      = full(sparse(PCD_orb_4,PCD_orb_4,v,norb,norb));
-end
 
 % ----------------------------------------------------------- %
 % ---------------------- Calculation ------------------------ % 
@@ -125,17 +100,16 @@ parfor ik=1:nks
     Ek(ik,:)  = diag(Etemp);
 	% Calculate the partial charge distributions
     if length(PCD_orb_1) ~= 0
-
-		PCD_1(ik,:) = diag(vec' * PCD_exp_1 * vec);
+		PCD_1(ik,:) = vecnorm(vec(PCD_orb_1,:)).^2;
     end 
     if length(PCD_orb_2) ~= 0
-		PCD_2(ik,:) = diag(vec' * PCD_exp_2 * vec);
+		PCD_2(ik,:) = vecnorm(vec(PCD_orb_2,:)).^2;
     end
     if length(PCD_orb_3) ~= 0
-                PCD_3(ik,:) = diag(vec' * PCD_exp_3 * vec);
+        PCD_3(ik,:) = vecnorm(vec(PCD_orb_3,:)).^2;
     end
     if length(PCD_orb_4) ~= 0
-                PCD_4(ik,:) = diag(vec' * PCD_exp_4 * vec);
+        PCD_4(ik,:) = vecnorm(vec(PCD_orb_4,:)).^2;
     end
 
 end

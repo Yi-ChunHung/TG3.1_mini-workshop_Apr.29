@@ -22,10 +22,6 @@ Codes that would be shown to students who attend the second part of the mini-wor
 
 ## ❓ [What else do we need to describe a material ?](./Info-for-material.pdf)
 
-# 📁 [SK_Harrison_TBHmftn](./SK_Harrison_TBHmftn)
-
-The program constructs a tight-binding Hamiltonian through Slater-Koster-Harrison method.
-
 # 📁 [TBHmftn](./TBHmftn)
 
 The program generates tight-binding model through a given tight-binding Hamiltonian or a _hr.dat file.
